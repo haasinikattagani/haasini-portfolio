@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Haasini Kattagani — CND student at IIIT Hyderabad." />
+  <title>Haasini Kattagani — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hero {
+      min-height: calc(100vh - 68px);
+      align-items: center;
+      padding-top: var(--space-16);
+      padding-bottom: var(--space-16);
+    }
+
+    .hero-name {
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      font-weight: 400;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-6);
+    }
+
+    .hero-avatar {
+      width: 420px;
+      height: 440px;
+      border-radius: 24px;
+      object-fit: cover;
+      object-position: top;
+      border: 2px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-typed-wrap {
+      margin-bottom: var(--space-6);
+      font-size: var(--text-lg);
+      min-height: 1.8rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.8rem;
+      font-size: var(--text-base);
+    }
+
+    .home-footer-note {
+      text-align: center;
+      padding: var(--space-6);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .home-footer-note a { color: var(--color-accent); }
+
+    [data-theme="dark"] .hero-avatar {
+      box-shadow: 0 0 0 3px var(--color-accent-soft), var(--shadow-md);
+    }
+  </style>
+</head>
+<body>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">Haasini-Portfolio</a>
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        </li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-name">
+
+      <div class="hero-text">
+        <h1 class="hero-name" id="hero-name">Haasini Kattagani</h1>
+        <div class="hero-typed-wrap" aria-live="polite">
+          <span id="typed-el"></span><span class="typed-cursor" aria-hidden="true"></span>
+        </div>
+        <p class="hero-desc">
+          Hello. I'm Haasini Kattagani. I'm pursuing B.Tech in Computer Science
+          and Master in Computational Natural Science at IIIT Hyderabad.
+          Here is my Portfolio.
+        </p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="about.html" class="btn btn-outline">About Me</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img
+          src="IMG-20220605-WA0000.jpg"
+          alt="Haasini Kattagani"
+          class="hero-avatar"
+        />
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by <a href="about.html">Haasini</a> · IIIT Hyderabad</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/typed.js"></script>
+  <script src="js/about.js"></script>
+  <script>
+    initTheme();
+    initNav();
+    initScrollReveal();
+
+    const typedEl = document.getElementById('typed-el');
+    if (typedEl) {
+      const typer = new TypedText(typedEl, {
+        strings: ['CND Student at IIIT-H', 'UG1' , 'welcome to my personal website'],
+        typingSpeed: 75,
+        eraseSpeed: 45,
+        pauseDuration: 2000
+      });
+      typer.start();
+    }
+  </script>
+</body>
+</html>

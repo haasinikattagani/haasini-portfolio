@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Haasini" />
+  <title>Projects — Haasini</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">Haasini</a>
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        </li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="projects-hero" aria-labelledby="projects-title">
+     
+      <h1 class="page-title" id="projects-title">My <em>Projects</em></h1>
+      <p style="color:var(--color-text-secondary); max-width:560px; margin-top:var(--space-4)">
+This page highlights a selection of projects completed during my time at IIITH, reflecting 
+my hands-on experience in C, Python, HTML, CSS, and JavaScript.
+      </p>
+    </header>
+
+   <div class="filter-bar" role="group" aria-label="Filter projects by technology">
+      <span class="filter-label" id="filter-label">Filter:</span>
+      <button class="filter-btn" data-tag="C" aria-pressed="false">C</button>
+      <button class="filter-btn" data-tag="Python" aria-pressed="false">Python</button>
+      <button class="filter-btn" data-tag="JavaScript" aria-pressed="false">JavaScript</button>
+      <button class="filter-btn" data-tag="HTML & CSS" aria-pressed="false">HTML & CSS</button>
+
+      <button class="filter-clear" aria-label="Clear all filters">✕ Clear</button>
+    </div>
+  
+    <section aria-label="Project cards" aria-live="polite">
+      <div class="projects-grid">
+
+        <article class="project-card reveal" data-tags="C">
+          <div class="project-number" aria-hidden="true">01</div>
+          <h2 class="project-title">Twixt Game</h2>
+          <div class="project-tags">
+            <span class="tag">C</span>
+
+          </div>
+          <div class="project-meta">
+           
+              Developed a command-line based Twixt game in C, implementing a grid-based 
+              board using a 2D array where each cell represents an empty, Red, or Black state.
+               The game supports user-defined board sizes and interactive commands such as new,
+                place, and show. Move validation ensures that markers are placed only in valid 
+                and unoccupied cells. Implemented connection logic based on chess-like knight 
+                moves. Winning conditions are defined such that Red connects top to bottom and 
+                Black connects left to right. Used recursion to explore paths by tracking 
+                visited cells and identifying valid connections; a win is detected when a 
+                path reaches the target edge. This project was completed as part of a 
+                first-semester C programming course and helped develop skills in recursion, 
+                condition handling, structured programming, and step-by-step problem solving.
+                 It also highlighted the trade-off between efficient logic implementation in 
+                 C and limited user interactivity in CLI systems, with scope for improvements
+                  in modularity, efficiency, additional command-line features, and transitioning
+                   to a GUI-based interface.
+          
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="C">
+          <div class="project-number" aria-hidden="true">02</div>
+          <h2 class="project-title">Music Unplugged</h2>
+          <div class="project-tags">
+            <span class="tag">C</span>
+
+          </div>
+          <div class="project-meta">
+            Developed a command-line based music management system in C that handles albums,
+             songs, and playlists. Implemented data organization using structures and linked 
+             lists, with albums stored in a linked list and dynamic memory allocation used for 
+             creating new entries. Incorporated string comparison for searching albums and enabled
+              grouping of songs into albums and playlists. This project was completed as an end of 
+              semester C programming assignment and strengthened my understanding of linked lists
+              , structures, memory management, and structured code organization. It also provided
+               insight into how real-world music collections are managed. The implementation highlights
+                the efficiency and control offered by linked lists and CLI-based systems, while also
+                 exposing limitations such as manual memory handling and limited user interaction 
+                 without a GUI, with scope for improvements like enhanced UI, search, and filtering
+                  features.
+
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="JavaScript, HTML & CSS">
+          <div class="project-number" aria-hidden="true">03</div>
+          <h2 class="project-title">Google Clone</h2>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML & CSS</span>
+          </div>
+          <div class="project-meta">
+            Developed a front-end web application as part of an Introduction
+             to Software Systems course using HTML, CSS, and JavaScript. The project 
+             replicates a simplified Google-like interface, featuring a structured 
+             layout with navigation links, a search bar, and a footer section. 
+             Implemented user interaction through JavaScript, including input handling, 
+             a character counter with a maximum limit, and dynamic enabling/disabling of
+              the search button. The application demonstrates fundamental concepts of web
+               development such as DOM manipulation, event handling, and responsive UI
+               structuring. This project helped build a strong foundation in designing
+                interactive user interfaces and integrating functionality across HTML,
+                 CSS, and JavaScript.
+          </div>
+        </article>
+
+ <article class="project-card reveal" data-tags="Python">
+          <div class="project-number" aria-hidden="true">04</div>
+          <h2 class="project-title">1D random walk model</h2>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+
+          </div>
+          <div class="project-meta">
+            Developed a Python-based simulation of a single electron trajectory 
+            using a 1D random walk model as part of a Computing in Sciences course.
+             The implementation uses NumPy for random number generation and simulates 
+             the electron’s motion by iteratively updating its position with fixed step 
+             sizes in positive or negative directions based on probabilistic outcomes.
+              Multiple trajectories are generated to analyze variation in motion, and
+               the results are visualized using Matplotlib through line plots and a
+                histogram of positions. The project demonstrates the use of arrays, loops,
+                 and stochastic modeling to simulate physical behavior, and helped build
+                  understanding of random processes, numerical simulation, and data 
+                  visualization in Python.
+          </div>
+        </article>
+   
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made by <a href="about.html">Haasini</a> · IIIT Hyderabad </p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/projects.js"></script>
+  <script>
+    initTheme();
+    initNav();
+    initProjectFilter();
+    initScrollReveal();
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Haasini." />
+  <title>Contact — Haasini </title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">Haasini</a>
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        </li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="contact-wrap">
+
+      
+
+
+      <div class="contact-form-wrap" aria-labelledby="form-title">
+        <h2 id="form-title" style="font-family:var(--font-display); font-size:var(--text-2xl); font-weight:300; color:var(--color-text-primary); margin-bottom:var(--space-6)">Send a Message</h2>
+
+        <div class="contact-form" role="form" aria-label="Contact form">
+
+
+          <form id="contact-form" novalidate aria-describedby="form-title">
+
+            <div class="form-group">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Your name" required aria-required="true" aria-describedby="e-name" />
+              <span class="form-error" id="e-name" role="alert">Please enter at least 2 characters.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" aria-describedby="e-email" />
+              <span class="form-error" id="e-email" role="alert">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-subject">Subject</label>
+              <input type="text" id="f-subject" name="subject" placeholder="What's this about?" required aria-required="true" aria-describedby="e-subject" />
+              <span class="form-error" id="e-subject" role="alert">Please enter at least 3 characters.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" rows="5" placeholder="Tell me more..." required aria-required="true" aria-describedby="e-message"></textarea>
+              <span class="form-error" id="e-message" role="alert">Please enter at least 10 characters.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </form>
+
+          <div class="form-success" id="form-success">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <h3>Message sent!</h3>
+            <p>Thanks for reaching out — I'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Made by <a href="about.html">Haasini</a> · IIIT Hyderabad</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+  <script>
+    initTheme();
+    initNav();
+    initContact();
+  </script>
+</body>
+</html>
